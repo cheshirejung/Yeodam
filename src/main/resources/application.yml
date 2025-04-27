@@ -1,0 +1,50 @@
+spring.application.name: Yeodam
+
+imp:
+  store-key: test
+  api-key: test
+  secret-key: test
+
+spring:
+  datasource:
+    url: test
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+
+  cloud:
+    aws:
+      credentials:
+        accessKey: test
+        secretKey: test
+      s3:
+        bucket: test
+      region:
+        static: test
+      stack:
+        auto: false
+      cloudfront:
+        domainName: test
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
